@@ -5,10 +5,17 @@ url += '?' + $.param({
 $.ajax({
   url: url,
   method: 'GET',
-}).done(function(result) {
-  console.log(result);
-}).fail(function(err) {
+}).done(function(data) {
+  console.log(data);
+   $.each(data.results, function(i, item) {
+                $('<tr>').html(
+                    '<td>'+item.title+'</td>'+
+                    '<td>'+item.description+'</td>'+
+                    '<td>'+item.author+'</td>'+
+                    '<td>'+item.publisher+'</td>'
+                ).appendTo('#books');
+
+            });
+        }).fail(function(err) {
   throw err;
 });
-
-console.log(url);
