@@ -1,3 +1,8 @@
+var tableData = document.getElementById("addData");
+
+tableData.onclick = function(){
+
+
 var url = "https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json";
 url += '?' + $.param({
   'api-key': "3d68093903fd47f48ca09fdb284aadb6"
@@ -19,3 +24,5 @@ $.ajax({
         }).fail(function(err) {
   throw err;
 });
+
+};
