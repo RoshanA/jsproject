@@ -1,7 +1,10 @@
+<<<<<<< HEAD
+=======
 var tableData = document.getElementById("addData");
 
 tableData.onclick = function(){
 
+>>>>>>> 612f85dd9d79a7a36b01795a62ea62a5c19edd8f
 
 var url = "https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json";
 url += '?' + $.param({
@@ -25,4 +28,8 @@ $.ajax({
   throw err;
 });
 
+<<<<<<< HEAD
+
+=======
 };
+>>>>>>> 612f85dd9d79a7a36b01795a62ea62a5c19edd8f
